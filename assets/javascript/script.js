@@ -5,7 +5,7 @@
 $(document).ready(function() {
 
   var currentEmotion;
-  var topics = ['happy', 'confused', 'silly', 'frustrated', 'angry'];
+  var topics = ['happy', 'confused', 'silly', 'frustrated', 'smelly'];
 
   // Creates initial button set from default topics[] array 
   for (i = 0; i < topics.length; i++) {
