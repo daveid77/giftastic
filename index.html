@@ -17,7 +17,10 @@
 
     <header>
       <div class="mainwrapper">
-        <h1>GifTastic</h1>
+        <h1>Human Emotion GifTastic</h1>
+
+        <div id="gif-buttons"></div>
+
       </div>
     </header>
 
@@ -26,35 +29,30 @@
 
         <div class="sidebar maininner">
 
-          <h3>sidebar</h3>
+          <form id="gif-form"> 
 
-          <p>sidebar paragraph</p>
+          <label for="gif-input">Add a Human Emotion</label>
+          <input type="text" id="gif-input" placeholder="Enter an Emotion">
 
-          <p>sidebar paragraph</p>
+          <input type="submit" value="Submit">
 
-          <p>sidebar paragraph</p>
+          </form>
 
-          <p>sidebar paragraph</p>
-
-          <p>sidebar paragraph</p>
+          <p id="error-message"></p>
 
         </div>
+
+        <!-- <div class="full maininner">
+
+          buttons here
+
+        </div> -->
 
         <div class="content maininner">
         
           <div id="audio-toggle"></div>
 
-          <h3>main content</h3>
-
-          <p>main paragraph</p>
-
-          <p>main paragraph</p>
-
-          <p>main paragraph</p>
-
-          <p>main paragraph</p>
-
-          <p>main paragraph</p>
+          <h3>Gif-Tastic</h3>
 
         </div>
 
@@ -72,7 +70,7 @@
   </footer>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script type="text/javascript" src="assets/javascript/game.js"></script>
+<script type="text/javascript" src="assets/javascript/script.js"></script>
 
 </body>
 

@@ -50,7 +50,7 @@ h4 {
 }
 p {
   padding: 10px 0;
-  line-height: 1.9;
+  line-height: 1.3;
 }
 ol {
   list-style-type: decimal;
@@ -75,19 +75,56 @@ header, section, footer {
 header {
   background-color: #000;
 }
-header img {
-  height: 60px;
-  padding: 14px 20px;
-  float: left;
+input, 
+textarea {
+  width: 100%;
+  height: auto;
+  margin: 10px 0;
+  padding: 13px 10px;
+  font-size: 16px;
+  box-sizing : border-box;
+  border: 1px solid #ddd;
+}
+textarea {
+  min-height: 170px;
+  resize: vertical;
+}
+input[type="submit"], 
+button {
+  padding: 10px 16px;
+  color: #fff;
+  font-size: 18px;
+  line-height: 1.3333333;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  background-color: #4aaaa5;
+}
+input[type="submit"]:hover, 
+button:hover {
+  background: #53BFBA;
+}
+input[type="submit"]:active, 
+button:active {
+  background: #3D8C88;
+}
+input[type="submit"]:focus, 
+button:focus {
+  outline:0;
 }
 #container {
   min-height: 100%;
   padding-bottom: 45px;
+  background: #d1d1d1;
   overflow: auto;
 }
 .mainwrapper {
   width: 960px;
   margin: 0 auto;
+}
+.full {
+  /*width: 100%;*/
+  /*width: 904px;*/
+  /*float: right;*/
 }
 .content {
   /*width: 56%;*/
@@ -106,8 +143,11 @@ header img {
   padding: 28px;
   background-color: #fff;
   border: 1px solid #ddd;
-  border-radius: 25px;
+  border-radius: 10px;
 }
+/*.full.maininner {
+  margin: 20px 0 0;
+}*/
 footer {
   position: fixed;
   z-index: 10;
@@ -131,6 +171,25 @@ footer .copyright a {
   text-decoration: none;
 }
 
+h1 {
+  width: 100%;
+  margin: 5px 10px;
+  padding: 10px 15px; 
+}
+#gif-buttons {
+  margin: 5px 10px;
+  padding: 10px 15px;
+}
+button.gif-button {
+  margin: 0 6px 0 0;
+  padding: 5px 8px;
+  color: #fff;
+  font-size: 16px;
+  border: 1px solid #2b2b2b;
+}
+#error-message {
+  color: #ff0000;
+}
 
 /* Width at 980px and below */
 @media screen and (max-width: 980px) {
@@ -139,6 +198,9 @@ footer .copyright a {
   }
   .mainwrapper {
     width: 728px;
+  }
+  .full {
+    width: 672px;
   }
   .content {
     width: 364px;
@@ -159,6 +221,11 @@ footer .copyright a {
   }
   .mainwrapper {
     width: 100%;
+  }
+  .full.maininner {
+    width: 80%;
+    margin: 20px auto;
+    float: none;
   }
   .content.maininner {
     width: 80%;
