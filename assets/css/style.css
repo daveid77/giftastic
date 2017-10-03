@@ -194,12 +194,16 @@ button.gif-button {
   margin-bottom: 0;
   line-height: 1;
 }
-#content-wrapper p {
+p.user-instruction {
+  margin: 0 10px 5px 10px;
+  padding: 0 15px 10px 15px; 
+  font-size: 14px;
+  font-style: italic;
+}
+#content-wrapper p.user-instruction {
   display: none;
   margin-top: 0;
   padding-top: 0; 
-  font-size: 14px;
-  font-style: italic;
 }
 #gif-holder div {
   margin: 0 10px 0 0;
