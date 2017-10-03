@@ -1,5 +1,5 @@
 // 
-// jQuery RPG Game
+// GifTastic
 //
 
 $(document).ready(function() {
@@ -13,7 +13,7 @@ $(document).ready(function() {
     createButton(currentEmotion);
   }
 
-  // Creates new buttons
+  // Creates and appends new buttons
   function createButton(currentEmotion) {
     var newButton = $('<button>').text(currentEmotion).attr({
         class: 'gif-button', 
@@ -30,7 +30,6 @@ $(document).ready(function() {
 
     // Gets emotion value from clicked button
     currentEmotion = $(this).attr('data-emotion');
-      // console.log('currentEmotion: ' + currentEmotion);
     $('#gif-label').text(currentEmotion + ' gifs');
     $('#content-wrapper p').show();
 
@@ -43,14 +42,12 @@ $(document).ready(function() {
       method: 'GET'
     }).done(function(response) {
       var results = response.data;
-        console.log(results);
       for (i = 0; i < results.length; i++) {
+        // Gathering values for API object
         var rating = results[i].rating;
-          // console.log(rating);
         var stillImage = results[i].images.fixed_height_still.url;
-          // console.log(stillImage);
         var animateImage = results[i].images.fixed_height.url;
-          // console.log(animateImage);
+        // Creating and appending elements that reflect values
         var newGifDiv = $('<div>');
         var newGifImage = $('<img>').attr({
             class: 'gif-image', 
@@ -83,7 +80,6 @@ $(document).ready(function() {
       $('#error-message').text('Already a button for that.');
     } else {
       topics.push(currentEmotion);
-        //console.log(topics);
       createButton(currentEmotion);
     }
 
@@ -96,7 +92,6 @@ $(document).ready(function() {
   $(document).on('click', '.gif-image', function() {
       // Get current "state" of image
       var gifState = $(this).attr('data-state');
-        console.log(gifState);
       // Image state/src toggle 
       if (gifState === 'still') {
         $(this).attr('src', $(this).attr('data-animate'));
